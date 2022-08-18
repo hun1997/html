@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포지션</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+        body {
+            height: 3000px
+
+        }
+        .position {
+            width: 400px;
+            height: 400px;
+            background-color: burlywood;
+            margin: 0 auto;
+            position: relative;
+
+        }
+        .position div {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+
+            /* absolute : 부모가 가지는 position의 위치를
+            찾아 상하좌우로 이동
+            부모에게 position 이 없을 경우
+            body 태그를 중심으로 이동함.
+            absolute 는 상하 , 좌우 방향 설정 필수임.
+             */
+
+        }
+        .position div:nth-of-type(1) {
+            background-color: aliceblue;
+            position: relative;
+            top: 20px;
+            left: 30px;
+            /* relative는 현재 위치에서 상하좌우 이동하여
+            부모, 형제 , 자식간의 겹칩이 이루어짐. 
+            relative는 필요에 따라서 상하좌우 적용안해도 됨.
+            */
+            z-index: 1;
+            /* 앞으로 보내기 , 뒤로 보내기
+            position이 있을때만 사용가능 */
+        }
+        .position div:nth-of-type(2) {
+            background-color: antiquewhite;
+            top: 10px;
+            right: 0px;
+            position: fixed;
+            /* fixed  : 고정
+            브라우저가 중심이 되면서 상하좌우 설정 */
+
+        }
+        .position div:nth-of-type(3) {
+            background-color: aqua;
+            bottom: 0;
+            right: 0;
+        }
+        .position div:nth-of-type(4) {
+            background-color: aquamarine;
+            bottom: 0;
+            left: -100px;
+        }
+        .position div:nth-of-type(5) {
+            background-color: royalblue;
+            top: 0;
+            left: 0;
+        
+        }
+
+    </style>
+</head>
+<body>
+    <div class="position">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+    </div><!-- .position end -->
+</body>
+</html>
