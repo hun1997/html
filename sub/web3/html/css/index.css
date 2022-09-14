@@ -279,7 +279,7 @@ header .side .s li button {
 }
 header .side .s li::before {
     position: absolute;
-    top: 20px;
+    top: 26px;
     left: 191px;
     content: '';
     border-left: 1px solid #333;
