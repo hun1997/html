@@ -415,8 +415,20 @@ header .inner nav ul li a {
     font-size: 16px;
 }
 .cont05 .info .text .list li.v {
+
+}
+.cont05 .info .text .list li.v {
+    animation: typing 2s steps(22);
+    overflow: hidden;
+    animation: typing 2s;
     background-color: orange;
     color: #fff;
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
 }
 
 
