@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>미원</title>
+    <style>
+        * { 
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        a {
+            text-decoration: none;
+        }
+        li {
+            list-style: none;
+        }
+        header {
+            width: calc(100% - 160px);
+            height: 100px;
+            display: flex;
+            margin: 0 auto;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ccc;
+        }
+        header nav ul {
+            display: flex;
+            justify-content: center;
+        }
+        header nav ul li {
+
+            padding: 0 25px;
+        }
+        header h1 a img {
+            width: 50px;
+            height: 50px;
+            
+        }
+        header .right_menu {
+            display: flex;
+        }
+        header .right_menu li {
+            padding-right: 13px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>
+            <a href="#">
+                <img src="img/logo.svg" alt="로고" />
+                <img src="img/logo_footer.svg" alt="로고"/>
+            </a>
+        </h1>
+        <nav>
+            <ul>
+                <li>브랜드 스토리</li>
+                <li>제품 이야기</li>
+                <li>미원식당</li>
+                <li>미원홍보관</li>
+            </ul>
+        </nav>
+        <ul class="right_menu">
+            <li>
+                <a href="#">
+                <img src="img/top1.svg" alt="블로그" />
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                <img src="img/top2.svg" alt="페북" />
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                <img src="img/top3.svg" alt="잉스타" />
+                </a>
+            </li>
+        </ul>
+
+    </header>
+</body>
+</html>
