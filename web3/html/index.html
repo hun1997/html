@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oofos</title>
+    <!-- css -->
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="font/oofso.css">
+    <link rel="stylesheet" href="css/oofos.css">
+    <!-- js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js" integrity="sha512-57oZ/vW8ANMjR/KQ6Be9v/+/h6bq9/l3f0Oc7vn6qMqyhvPd1cvKBRWWpzu0QoneImqr2SkmO4MSqU+RpHom3Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+        
+        $(function(){
+            $('.top a').click(function(e){
+                e.preventDefault();
+            });
+            $('.side_open').click(function(){
+                $('.side').css({
+                    'right':'0',
+                    'transition':'1s'
+                });
+            });
+            $('.side_close').click(function(){
+                $('.side').css({
+                    'right':'-100%',
+                    'transition':'1s'
+                });
+            });
+            $('.top02 li').click(function(){
+
+                $('.top02_img li').removeClass('on');
+                $('.top02_img li').eq($(this).index()).addClass('on');
+            });
+
+        var swiper = new Swiper(".sy", {
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",            
+        },
+        });
+        var swiper = new Swiper(".min1", {
+            slidesPerView: 4,
+            centeredSlides: true,
+            spaceBetween: 0,
+            pagination: {
+            el: ".swiper-pagination",
+            type: "fraction"
+            },
+        });
+        var swiper = new Swiper(".min2", {
+            slidesPerView: 4,
+            centeredSlides: true,
+            spaceBetween: 0,
+            pagination: {
+            el: ".swiper-pagination",
+            type: "fraction"
+            },
+        });
+
+        // 헤더 스크롤 변화
+        $(window).scroll(function() {
+            if($(this).scrollTop() == 0)
+            $('#headerbar').css(
+                'background-color','#ccc'
+            );
+            else
+                $('#headerbar').css(
+                    'background-color','rgba(204, 204, 204, 0.445)'
+                    );
+            });
+    });
+
+    </script>
+</head>
+
+<body>
+    <header id="headerbar">
+        <div class="top_menu">
+            <h1>
+                <a href="#">
+                    <img src="img/logo_m.png" alt="로고"/>
+                </a>
+            </h1>
+            <nav class="top">
+                <ul class="bar">
+                    <li class="top01">
+                        <a href="#">SHOP</a>
+                        <div class="top01box">
+                            <ul class="top02">
+                                <li>
+                                    <a href="#">전체상품</a>
+                                </li>
+                                <li>
+                                    <a href="#">OOahh Slide (슬리퍼)</a>
+                                </li>
+                                <li>
+                                    <a href="#">OOcloog(클로그)</a>
+                                </li>
+                                <li>
+                                    <a href="#">OOmg (컴포트 슈)</a>
+                                </li>
+                                <li>
+                                    <a href="#">OOmg Boot (부츠)</a>
+                                </li>
+                                <li>
+                                    <a href="#">OOlala (울랄라)</a>
+                                </li>
+                                <li>
+                                    <a href="#">OOriginal Flip Flop (조리)</a>
+                                </li>
+                                <li>
+                                    <a href="#">MEN</a>
+                                </li>
+                                <li>
+                                    <a href="#">WOMEN</a>
+                                </li>
+                            </ul><!-- top02-end1 -->
+                            <ul class="top02_img">
+                                <li class="on">
+                                    <a href="#"><img src="img/logo_m.png" alt="전채" /></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="img/topmenu_1_8.jpg" alt="슬리퍼" /></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="img/topmenu_1_6.jpg" alt="클로그" /></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="img/topmenu_1_1.jpg" alt="신발" /></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="img/topmenu_1_3.jpg" alt="부츠" /></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="img/topmenu_1_2.jpg" alt="울라라" /></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="img/topmenu_1_4.jpg" alt="조리" /></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="img/topmenu_1_5.jpg" alt="파랑신" /></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="img/topmenu_1_7.jpg" alt="치타" /></a>
+                                </li>
+                            </ul><!-- .top02_img -->
+                        </div><!-- top01_1 -->
+                    </li><!-- .top01-end -->
+                    <li class="top01_1">
+                        <a href="#">WHY OOFOS</a>
+                        <div class="top01_2">
+                            <ul class="top02_1">
+                                <li>
+                                    <a href="#">WHY OOFOS
+                                        <i class="icon11 xi-long-arrow-right"><span>날아감</span></i></a>
+                                    <P>
+                                        우포스의 독점 기술<br>
+                                        OOfosam과 Project  Pink.
+                                    </P>
+                                </li>
+                            </ul><!-- top02-1end -->
+                            <ul class="top02_2">
+                                <li>
+                                    <a><img src="img/topmenu_2.jpg" alt="설명" /></a>
+                                </li>
+                            </ul><!-- top02_2-end -->
+    
+                        </div><!-- .top01_2 end -->
+                    </li><!-- .top1_1-end -->
+                    <li class="top01_1">
+                        <a href="#">REVIEW</a>
+                        <div class="top01_2">
+                            <ul class="top02_1">
+                                <li>
+                                    <a href="#">REVIEW
+                                        <i class="icon11 xi-long-arrow-right"><span>날아감</span></i></a>
+    
+                                    <p>
+                                        우포스 상품을 구매하신<br>
+                                        고객님들의 후기
+                                    </p>
+                                </li>
+                            </ul><!-- top02-1end -->
+                            <ul class="top02_2">                  
+                                <li>
+                                <a><img src="img/topmenu_3.jpg" alt="설명" /></a>
+                                </li>
+                            </ul><!-- top02_2-end -->
+    
+                        </div>
+                    </li><!-- .top1_1-end -->
+                    <li class="top01_1">
+                        <a href="#">FIND A STORE</a>
+                        <div class="top01_2">
+                            <ul class="top02_1">
+                                <li>
+                                    <a href="#">FIND A STORE
+                                        <i class="icon11 xi-long-arrow-right"><span>날아감</span></i></a>
+                                    <p>
+                                        우포스 상품 판매 업체<br>
+                                        및 대리점 안내
+                                    </p>
+                                </li>
+                            </ul><!-- top02_2-end -->
+                            <ul class="top02_2">                  
+                                <li>
+                                    <a><img src="img/topmenu_4.jpg" alt="설명" /></a>
+                                </li>
+                            </ul><!-- top02-1end -->
+                        </div>
+                    </li><!-- .top1_1-end -->
+                    <i class="side_open xi-ellipsis-h"><span>슝</span>
+                    </i><!-- .side_open-end -->
+                </ul><!-- .bar-end -->
+            </nav><!-- .top-end -->
+            <nav class="side">
+                <i class="side_close xi-angle-right-min"><span>스르륵</span>
+                </i><!-- .side_close-end -->
+                <ul class="s">
+                    <li>
+                        <input type="text" placeholder="상품 검색"/>
+                        <button><i class="sc xi-search"><span>히히</span></i></button>
+                    </li>
+                </ul><!-- .s-end -->
+                <ul class="i">
+                    <li><a href="#">LOGIN</a></li>
+                    <li><a href="#">JOIN</a></li>
+                </ul><!-- .i-end -->
+                <ul class="de">
+                    <li><a href="#">장바구니<i class="de_icon xi-market"><span>윙</span></i></a></li>
+                    <li><a href="#">최근에 본 상품<i class="de_icon xi-clock"><span>윙</span></i></a></li>
+                    <li><a href="#">메인페이지<i class="de_icon xi-home-o"><span>윙</span></i></a></li>
+                    <li><a href="#">카카오채널<i class="de_icon xi-kakaotalk"><span>윙</span></i></a></li>
+                    <li><a href="#">1:1 채팅문의<i class="de_icon xi-message"><span>윙</span></i></a></li>
+                </ul><!-- .de-end -->
+                
+            </nav><!-- .side-end -->
+        </div><!-- .top_menu-end -->
+    </header>
+    <section class="main">
+        <div class="sy">
+            <div class="swiper-wrapper">
+            <div class="swiper-slide yo">
+                <div class="ma1">
+                    <img src="img/main1.jpg" alt="메인 이미지"/>
+                </div>
+                <h2>혁신적인 OOfoam® 기술은 일반적인 신발의 폼 소재보다</br>
+                    37% 더 많은 충격을 흡수하여 발과 관절에 가해지는 충격을 줄여줍니다.
+                    </h2>
+                <div class="ma2">
+                    <img src="img/main_txt01.png" alt="메인 텍스트"/>
+                </div>
+            </div>
+            <div class="swiper-slide ya">
+                <div class="ma1">
+                    <a href="#"><span>버튼</span></a>
+                    <img src="img/main5.jpg" alt="메인 이미지"/>
+                </div>
+                <h3>독특한 전방향 신축성을 가진 캔버스 소재로</br>
+                    만들어진 이 신발은 발 전체에 윤곽이 그려집니다.</h3>
+            </div>
+            <div class="swiper-slide hi">
+                <div class="ma1">
+                    <img src="img/main4.png" alt="메인 이미지"/>
+                </div>
+                <h4>OOFOS는 Dana-Farber과 Jimmy Fund에서 지정한 공식 리커버리 슈즈 브랜드입니다.</br>
+                    OOFOS.com에서 제품을 구매하셨을 때, OOFOS는 유방암 치료 연구를 위해 기부하고 있습니다.</h4>
+                <div class="ma3">
+                    <ul>  
+                        <li><img src="img/main4_logo.png" alt="로고1"/></li>
+                        <li><img src="img/main4_logo2.png" alt="로고2"/></li>
+                    </ul>
+                </div>
+            </div>
+            </div><!-- swiper end -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+    <section class="cont01">
+        <img src="img/cont01_txet.png" alt="텍스트" />
+        <div #swiperRef="" class="swiper-container min1">
+            <div class="swiper-wrapper min">
+                <div class="swiper-slide">
+                    <img src="img/cont01_1-1.jpg" alt="상품1" />
+                    <div class="item"><!-- item 1 -->
+                        <p>OOAHH BLACK</p>
+                        <strong>62,000 원</strong>
+                    </div><!-- item end 1 -->
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/cont01_1-2.jpg" alt="상품2" />
+                    <div class="item"><!-- item 1 -->
+                        <p>5082 OOMG EEZEE GRAY/WHITE (M)</p>
+                        <strong>169,000 원</strong>
+                    </div><!-- item end 1 -->
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/cont01_1-3.jpg" alt="상품3" />
+                    <div class="item"><!-- item 1 -->
+                        <p>5072 OOMG EEZEE CHEETAH</p>
+                        <strong>169,000 원</strong>
+                    </div><!-- item end 1 -->
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/cont01_1-4.jpg" alt="상품4" />
+                    <div class="item"><!-- item 1 -->
+                        <p>OOAHH BLACK</p>
+                        <strong>69,000 원</strong>
+                    </div><!-- item end 1 -->
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/cont01_1-5.jpg" alt="상품5" />
+                    <div class="item"><!-- item 1 -->
+                        <p>6070 OOMG BOOTIE</p>
+                        <strong>219,000 원</strong>
+                    </div><!-- item end 1 -->
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/cont01_1-6.jpg" alt="상품6" />
+                    <div class="item"><!-- item 1 -->
+                        <p>OORIGLNAL BLACK</p>
+                        <strong>62,000 원</strong>
+                    </div><!-- item end 1 -->
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/cont01_1-7.jpg" alt="상품7" />
+                    <div class="item"><!-- item 1 -->
+                        <p>OOLALA BLUE</p>
+                        <strong>89,000 원</strong>
+                    </div><!-- item end 1 -->
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/cont01_1-8.jpg" alt="상품8" />
+                    <div class="item"><!-- item 1 -->
+                        <p>5070 OOMG BLACK/WHITE</p>
+                        <strong>169,000 원</strong>
+                    </div><!-- item end 1 -->
+                </div>
+                <a href="#">
+                    <h3>
+                        상품 페이지<br>바로가기
+                    </h3>
+                    <i class="minicon xi-long-arrow-right"><span>화살표</span></i>
+                </a>
+            </div>
+        </div>
+        <div class="sd"><p>Slide</p></div>
+        <div #swiperRef="" class="swiper-container min2">
+            <div class="swiper-wrapper min">
+                <div class="swiper-slide">
+                    <img src="img/cont01_2-4.jpg" alt="상품1" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/cont01_2-5.jpg" alt="상품1" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/cont01_2-3.jpg" alt="상품1" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/cont01_2-6.jpg" alt="상품1" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/cont01_2-7.jpg" alt="상품1" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/cont01_2-8.jpg" alt="상품1" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/cont01_2-1.jpg" alt="상품1" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/cont01_2-2.jpg" alt="상품1" />
+                </div>
+                <a href="#">
+                    <h3>
+                        상품 페이지<br>바로가기
+                    </h3>
+                    <i class="minicon xi-long-arrow-right"><span>화살표</span></i>
+                </a>
+            </div>
+        </div>
+        <div class="sc"><p>Slide</p></div>
+
+    </section>
+    <section class="cont02">
+        <div class="list">
+            <img src="img/cont02_1.jpg" alt="img1" />
+            <div class="item">
+                <h3>BEST PRODUCTS</h3>
+                <ul>
+                    <li>Grab these styles</li>
+                    <li>before they are gone</li>
+                </ul>
+                <div class="item_bt">
+                    <a href="#">
+                        <i class="itemcon xi-long-arrow-right"><span>날아감</span></i>
+                        <p>SHOP</p>
+                    </a>
+                </div>
+            </div><!-- item end -->
+        </div><!-- list end -->
+        <div class="list">
+            <img src="img/cont02_2.jpg" alt="img2" />
+            <div class="item">
+                <h3>NEW ARRIVALS</h3>
+                <ul>
+                    <li>Grab these styles</li>
+                    <li>before they are gone</li>
+                </ul>
+                <div class="item_bt">
+                    <a href="#">
+                        <i class="itemcon xi-long-arrow-right"><span>날아감</span></i>
+                        <p>SHOP</p>
+                    </a>
+                </div>
+            </div><!-- item end -->
+        </div><!-- list end -->
+    </section>
+    <section class="cont03">
+        <div class="list2">
+            <div class="big">
+                <div class="big1">
+                    <p>MADE WITH OOfoam®ㅍ</p>
+                    <h2>MADE FOR RECOVERY</h2>
+                </div>
+                <img src="img/cont03_1.jpg" alt="큼" />
+                <div class="box">
+                    <h3>몸의 피로를 줄이면, 더 많은 일을 할 수 있습니다.<br>
+                        WORK YOUR BODY LESS, SO YOU CAN DO MORE</h3>
+                    <p>운동은 관절, 특히 발과 발목과 같은 부위에 부담이 갈 수 있습니다.<br>
+                        길었던 하루였거나 격한 운동 후에는 피로와 근육통으로 이어질 수 있습니다.</p>
+                </div><!-- .box end -->
+            </div><!-- .big end -->
+            <div class="small">
+                <div class="small_box">
+                    <img src="img/cont03_2.jpg" alt="큼" />
+                    <div class="box">
+                        <div>
+                            <h3>FEEL RECHARGED</h3>
+                            <p>발과 관절에 가해지는 충격과 압력을 줄일 수 있다면 어떨까요?<br>
+                                그로 인해 피로와 긴장감 대신 회복되는 느낌을 느낄 수 있습니다.<br>
+                                마법 같죠? 실제로 그것이 OOFOS 리커버리 신발의 과학입니다.</p>
+                        </div>
+                    </div><!-- .box end -->
+                </div><!-- .small end -->
+                <div class="small_box">
+                    <img src="img/cont03_3.jpg" alt="큼" />
+                    <div class="box">
+                        <div>
+                            <h3>RECOVER FASTER<br>
+                                WITH OOFOAM</h3>
+                            <p>OOFOS 독점 OOfoam® 기술 은 일반 폼 보다<br>
+                                37% 더 많은 충격을 흡수합니다.<br>
+                                풋베드는 발아치를 받쳐주어 발목의 에너지소모를<br>
+                                최대 47% 까지 줄여줍니다.<br>
+                                그래서 걷기가 쉬워지고 회복이 빠릅니다.<br>
+                                실제로 기분도 좋아집니다.<br></p>
+                            <p>*2018 버지니아 대학교 실험 연구 기반</p>
+                        </div>
+                    </div><!-- .box end -->
+                </div><!-- .box end -->
+            </div><!-- .small end -->
+        </div>
+    </section>
+    <footer>
+        <div class="f_logo">
+            <img src="img/logo_m.png" alt="푸터" />
+        </div>
+        <div class="f_box">
+            <ul class="f_0">
+                <li><a href="#">회사소개</a></li>
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#">개인정보처리방침</a></li>
+                <li><a href="#">이용안내</a></li>
+                <li><a href="#">1:1 문의</a></li>
+            </ul>
+            <ul class="f_1">
+                <li>상호명:(주)프라임네트웍스</li>
+                <li>대표 : 윤병찬</li>
+                <li>메일 : <a href="#">mjlee@primenetworks.co.kr</a></li>
+                <li>통신판매업신고번호 : 2014-부산동래-0184</li>
+                <li>사업자등록번호 : 607-86-13862 <a href="#">사업자정보확인 ></a></li>
+                <li>대표번호 : 1899-0819</li>
+                <li>팩스번호 : 051-552-6565</li>
+                <li>주소 : 부산광역시 동래구 금강로 93-1 (상지빌딩) 5층 프라임네트웍스 [반품/교환주소 : 부산광역시 동래구 차밭골로 3 (프라임빌딩) 1층 우포스]</li>
+                <li>개인정보관리자 :</li>
+                <li>계좌번호 : KEB하나 305-910043-80705</li>
+            </ul>
+            <ul class="f_2">
+                <li>copyright (c) <strong>www.oofos.co.kr</strong> all rights reserved.</li>
+            </ul>
+        </div>
+        <div class="f_box2">
+            <strong>고객센터(10:00AM ~ 4:00PM)</strong>
+            <h3>1899-0819</h3>
+            <p><i class="footer_icon xi-mail-o"><span>메일</span></i>mjlee@primenetworks.co.kr</p>
+        </div>
+    </footer>
+</body>
+</html>
