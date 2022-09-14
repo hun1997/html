@@ -1,7 +1,0 @@
-.cont01 .list ul li::before {
-    content: '';
-    background-image: url("../img/icon01.png");
-    display: block;
-    width: 26px;
-    height: 26px;
-}
