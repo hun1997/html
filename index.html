@@ -21,7 +21,6 @@
         <script>
             $(function(){
                 $('header a').click(function(e){ 
-                //이안에 e 넣는게 공식이라고함
                     e.preventDefault(); //a 링크 방지
                 });
 
@@ -68,8 +67,18 @@
                     });
                 });
                 $('.sona').click(function(){
-                    $('footer .inner').slideUp(1000, 'easeInElastic');
+                    $('.inn').css({
+                        'top' : '0',
+                        'transition':'1s'
+                    });
                 });
+                $('.sona2').click(function(){
+                $('.inn').css({
+                    'top':'100%',
+                    'transition':'1s'
+                    });
+                });
+                // $('#whell').mousewhell
             });
         </script>
 
@@ -102,9 +111,9 @@
             </div><!-- .inner end -->
         </div><!-- .main_visual end -->
         <div class="section cont03" id="section1">
-            <div class="wave01"><span>1</span></div>
-            <div class="wave02"><span>1</span></div>
-            <div class="wave03"><span>1</span></div>
+            <div class="wave01"><span class="sp">1</span></div>
+            <div class="wave02"><span class="sp">1</span></div>
+            <div class="wave03"><span class="sp">1</span></div>
             <div class="slide" id="slide1">
                 <div class="title inner">
                     <h3>웹디자인</h3>
@@ -191,7 +200,16 @@
             
         </div>
         <div class="section cont01" id="section2">
-            <div class="inner">
+            <div class="fish" id="fish1"><span class="sp">일번</span></div>
+            <div class="fish" id="fish2"><span class="sp">일번</span></div>
+            <div class="fish" id="fish3"><span class="sp">일번</span></div>
+            <div class="fish" id="fish4"><span class="sp">일번</span></div>
+            <div class="fish" id="fish5"><span class="sp">일번</span></div>
+            <div class="fish" id="fish6"><span class="sp">일번</span></div>
+            <div id="oepn">
+                
+            </div>
+            <div class="inner" id="side">
                 <div class="title">
                     <h3>영상편집</h3>
                     <p>프리미어프로 , 에프터이펙트 등을 사용하여 모션그래픽을 제작하였습니다.</p>
@@ -496,6 +514,14 @@
             <div class="inn">
                 <div class="fimg">
                     <img src="img/footer.png" alt="푸터" />
+                </div>
+                <div class="sona2">
+                    <div class="so1">
+                        <img src="img/sona.png" alt="레이더"/>
+                        <div class="so2">
+                            <img src="img/sona1.png" alt="감지"/>
+                        </div>
+                    </div>
                 </div>
                 <ul>
                     <li><a href="#">유튜브채널 이동</a></li>
