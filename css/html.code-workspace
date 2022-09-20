@@ -1,0 +1,25 @@
+{
+	"folders": [
+		{
+			"path": "../../../html"
+		},
+		{
+			"path": "../../../포토샵+일러스트"
+		},
+		{
+			"path": "../../../포토샵+일러스트/04_정관장_레이아웃변경/html"
+		},
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../../박상훈/리뉴얼3번"
+		},
+		{
+			"path": "../../../박상훈/html"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "html"
+	}
+}
