@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>미원</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link href="font/font.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/index.css" />
+
+    <!-- js  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+        integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"
+        integrity="sha512-57oZ/vW8ANMjR/KQ6Be9v/+/h6bq9/l3f0Oc7vn6qMqyhvPd1cvKBRWWpzu0QoneImqr2SkmO4MSqU+RpHom3Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $(function () {
+            $('.gnb a').click(function (e) {
+                //이안에 e 넣는게 공식이라고함
+                e.preventDefault(); //a 링크 방지
+            });
+
+            /* 메뉴아이콘 클릭 */
+            $('.menu_open').click(function () {
+                $('.gnb_all').slideDown(1000, 'easeOutBounce');
+            });
+            $('.menu_close').click(function () {
+                $('.gnb_all').slideUp(1000, 'easeInElastic');
+            });
+
+            /* 메뉴클릭 시 내부페이지 이동 */
+            $('.gnb ul li').click(function () {
+                var page = $('section').eq($(this).index());
+                var pageTop = page.offset().top;
+                $('html, body').animate({
+                    scrollTop: pageTop
+                }, 1500, 'easeOutQuart');
+            });
+
+        });//jq end
+    </script>
+</head>
+
+<body>
+    <header>
+        <div>
+            <h1>
+                <a href="#">
+                    <img src="img/logo.svg" alt="로고" />
+                    <img src="img/logo_footer.svg" alt="로고" />
+                </a>
+            </h1>
+            <nav class="gnb">
+                <ul>
+                    <li><a href="#c1">Since 1956</a></li>
+                    <li><a href="#c2">미원의제품</a></li>
+                    <li><a href="#">미원소식</a></li>
+                    <li><a href="#">미원의정보</a></li>
+                </ul>
+            </nav><!-- .gnd end -->
+            <!-- menu_op end -->
+            <nav class="gnb_all">
+                <i class="menu_close xi-angle-up">
+                    <span>메뉴off</span>
+                </i>
+                <!-- menu off end -->
+                <ul>
+                    <li><a href="#c1">브랜드 스토리</a></li>
+                    <li><a href="#c2">제품 이야기</a></li>
+                    <li><a href="#">미원식당</a></li>
+                    <li><a href="#">미원홍보관</a></li>
+                </ul>
+            </nav>
+            <!-- .gnd all end -->
+            <ul class="right_menu">
+                <li>
+                    <a href="#">
+                        <img src="img/top1.svg" alt="블로그" />
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/top2.svg" alt="페북" />
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/top3.svg" alt="잉스타" />
+                    </a>
+                </li>
+            </ul>
+            <i class="menu_open xi-bars">
+                <span>메뉴on</span>
+            </i>
+        </div>
+    </header>
+    <section class="title">
+        <div>
+            <h2>
+                SINCE 1956
+            </h2>
+            <h2>
+                진정한 맛을 즐기다
+            </h2>
+        </div>
+        <div class="logo">
+            <img src="img/title_logo.png" alt="타이틀" />
+
+        </div>
+    </section>
+    <!-- title end -->
+    <section class="cont01">
+        <div class="cot1">
+            <div class="text">
+                <img src="img/logo.svg" alt="로고" />
+                <h3>Product</h3>
+                <p>미원의 제품을 만나보세요.</p>
+            </div>
+            <div class="list">
+                <div class="item">
+                    <img src="img/b_img01.jpg" alt="미원" />
+                    <div>
+                        <strong>미원</strong>
+                    </div>
+                </div><!-- item end 01 -->
+                <div class="item">
+                    <img src="img/b_img02.jpg" alt="미원" />
+                    <div>
+                        <strong>감칠맛 미원</strong>
+                    </div>
+                </div><!-- item end 02 -->
+                <div class="item">
+                    <img src="img/b_img03.jpg" alt="미원" />
+                    <div>
+                        <strong>아미노산 미원</strong>
+                    </div>
+                </div><!-- item end 03 -->
+                <div class="item">
+                    <img src="img/b_img04.jpg" alt="미원" />
+                    <div>
+                        <strong>중화 미원</strong>
+                    </div>
+                </div><!-- item end 04 -->
+                <div class="item">
+                    <img src="img/b_img05.jpg" alt="미원" />
+                    <div>
+                        <strong>발효미원</strong>
+                    </div>
+                </div><!-- item end 05 -->
+                <div class="item">
+                    <img src="img/b_img06.jpg" alt="미원" />
+                    <div>
+                        <strong>다시마 발효미원</strong>
+                    </div>
+                </div><!-- item end 06 -->
+                <div class="item">
+                    <img src="img/b_img07.jpg" alt="미원" />
+                    <div>
+                        <strong>치킨스톡 오리지널</strong>
+                    </div>
+                </div><!-- item end 07 -->
+                <div class="item">
+                    <img src="img/b_img08.jpg" alt="미원" />
+                    <div>
+                        <strong>맛소금</strong>
+                    </div>
+                </div><!-- item end 08 -->
+            </div><!-- list end -->
+        </div>
+    </section>
+    <!-- cont01 end  cont02 st-->
+    <section class="cont02">
+        <div class="cot2">
+            <div class="news">
+                <h3>News</h3>
+                <div>
+                    <a href="#"><img src="img/News_img1.jpg" /></a>
+                    <p>2021 .08 .02</p>
+                    <strong>라면에 MSG 좀 넣어주세요"...'미원라면' 인기</strong>
+                </div>
+                <div>
+                    <a href="#"><img src="img/News_img2.jpg" /></a>
+                    <p>2021 .08 .02</p>
+                    <strong>라면에 MSG 좀 넣어주세요"...'미원라면' 인기</strong>
+                </div>
+            </div>
+            <div class="you">
+                <h3>YouTube</h3>
+                <div>
+                    <a href="#"><img src="img/Youtube_img1.jpg" /></a>
+                    <p>#미원광고 #감칠맛내는조연 #미원</p>
+                    <strong>감칠맛을 넘어 이젠 감성샷도 살리는 미원</strong>
+                </div>
+                <div>
+                    <a href="#"><img src="img/Youtube_img2.jpg" /></a>
+                    <p>#미원광고 #감칠맛내는조연 #미원</p>
+                    <strong>[눈물주의] 65년째 감칠맛 담당인 ‘미원’의 서사 (with 슈스 김지석)</strong>
+                </div>
+            </div>
+        </div>
+        <!-- cot2 end -->
+    </section>
+    <!-- cont02 end -->
+    <section class="footer">
+        <div class="end">
+            <a href="#">
+                <p>개인정보처리방침 <img src="img/footer1_window.svg" alt="아이콘" />　이메일 무단수집거부　 사이트맵</p>
+            </a>
+            <img class="flogo" src="img/logo_footer.svg" alt="푸터로고" />
+            <ul>
+                <li>서울시 종로구 창경궁로 120(인의동)</li>
+                <li>상호: 대상(주), 대표이사:임정배</li>
+                <li>사업자등록번호:109-81-14886, TEL:02-2220-9500,</li>
+                <li>FAX:02-2232-3719, E-mail: e-marketing@daesang.com</li>
+            </ul>
+            <h6>Copyright DAESANG. All rights reserved.</h6>
+        </div>
+        </footer>
+</body>
+
+</html>

@@ -1,82 +1,87 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>oofos</title>
     <!-- css -->
-    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
     <link rel="stylesheet" href="font/oofso.css">
     <link rel="stylesheet" href="css/index.css">
     <!-- js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js" integrity="sha512-57oZ/vW8ANMjR/KQ6Be9v/+/h6bq9/l3f0Oc7vn6qMqyhvPd1cvKBRWWpzu0QoneImqr2SkmO4MSqU+RpHom3Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+        integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"
+        integrity="sha512-57oZ/vW8ANMjR/KQ6Be9v/+/h6bq9/l3f0Oc7vn6qMqyhvPd1cvKBRWWpzu0QoneImqr2SkmO4MSqU+RpHom3Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
     <script>
-        
-        $(function(){
-            $('.top a').click(function(e){
+
+        $(function () {
+            $('.top a').click(function (e) {
                 e.preventDefault();
             });
-            $('.side_open').click(function(){
+            $('.side_open').click(function () {
                 $('.side').css({
-                    'right':'0',
-                    'transition':'1s'
+                    'right': '0',
+                    'transition': '1s'
                 });
             });
-            $('.side_close').click(function(){
+            $('.side_close').click(function () {
                 $('.side').css({
-                    'right':'-100%',
-                    'transition':'1s'
+                    'right': '-100%',
+                    'transition': '1s'
                 });
             });
-            $('.top02 li').click(function(){
+            $('.top02 li').click(function () {
 
                 $('.top02_img li').removeClass('on');
                 $('.top02_img li').eq($(this).index()).addClass('on');
             });
 
-        var swiper = new Swiper(".sy", {
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",            
-        },
-        });
-        var swiper = new Swiper(".min1", {
-            slidesPerView: 4,
-            centeredSlides: true,
-            spaceBetween: 0,
-            pagination: {
-            el: ".swiper-pagination",
-            type: "fraction"
-            },
-        });
-        var swiper = new Swiper(".min2", {
-            slidesPerView: 4,
-            centeredSlides: true,
-            spaceBetween: 0,
-            pagination: {
-            el: ".swiper-pagination",
-            type: "fraction"
-            },
-        });
+            var swiper = new Swiper(".sy", {
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+            });
+            var swiper = new Swiper(".min1", {
+                slidesPerView: 4,
+                centeredSlides: true,
+                spaceBetween: 0,
+                pagination: {
+                    el: ".swiper-pagination",
+                    type: "fraction"
+                },
+            });
+            var swiper = new Swiper(".min2", {
+                slidesPerView: 4,
+                centeredSlides: true,
+                spaceBetween: 0,
+                pagination: {
+                    el: ".swiper-pagination",
+                    type: "fraction"
+                },
+            });
 
-        // 헤더 스크롤 변화
-        $(window).scroll(function() {
-            if($(this).scrollTop() == 0)
-            $('#headerbar').css(
-                'background-color','#ccc'
-            );
-            else
-                $('#headerbar').css(
-                    'background-color','rgba(204, 204, 204, 0.445)'
+            // 헤더 스크롤 변화
+            $(window).scroll(function () {
+                if ($(this).scrollTop() == 0)
+                    $('#headerbar').css(
+                        'background-color', '#ccc'
+                    );
+                else
+                    $('#headerbar').css(
+                        'background-color', 'rgba(204, 204, 204, 0.445)'
                     );
             });
-    });
+        });
 
     </script>
 </head>
@@ -86,7 +91,7 @@
         <div class="top_menu">
             <h1>
                 <a href="#">
-                    <img src="img/logo_m.png" alt="로고"/>
+                    <img src="img/logo_m.png" alt="로고" />
                 </a>
             </h1>
             <nav class="top">
@@ -163,7 +168,7 @@
                                         <i class="icon11 xi-long-arrow-right"><span>날아감</span></i></a>
                                     <P>
                                         우포스의 독점 기술<br>
-                                        OOfosam과 Project  Pink.
+                                        OOfosam과 Project Pink.
                                     </P>
                                 </li>
                             </ul><!-- top02-1end -->
@@ -172,7 +177,7 @@
                                     <a><img src="img/topmenu_2.jpg" alt="설명" /></a>
                                 </li>
                             </ul><!-- top02_2-end -->
-    
+
                         </div><!-- .top01_2 end -->
                     </li><!-- .top1_1-end -->
                     <li class="top01_1">
@@ -182,19 +187,19 @@
                                 <li>
                                     <a href="#">REVIEW
                                         <i class="icon11 xi-long-arrow-right"><span>날아감</span></i></a>
-    
+
                                     <p>
                                         우포스 상품을 구매하신<br>
                                         고객님들의 후기
                                     </p>
                                 </li>
                             </ul><!-- top02-1end -->
-                            <ul class="top02_2">                  
+                            <ul class="top02_2">
                                 <li>
-                                <a><img src="img/topmenu_3.jpg" alt="설명" /></a>
+                                    <a><img src="img/topmenu_3.jpg" alt="설명" /></a>
                                 </li>
                             </ul><!-- top02_2-end -->
-    
+
                         </div>
                     </li><!-- .top1_1-end -->
                     <li class="top01_1">
@@ -210,7 +215,7 @@
                                     </p>
                                 </li>
                             </ul><!-- top02_2-end -->
-                            <ul class="top02_2">                  
+                            <ul class="top02_2">
                                 <li>
                                     <a><img src="img/topmenu_4.jpg" alt="설명" /></a>
                                 </li>
@@ -226,7 +231,7 @@
                 </i><!-- .side_close-end -->
                 <ul class="s">
                     <li>
-                        <input type="text" placeholder="상품 검색"/>
+                        <input type="text" placeholder="상품 검색" />
                         <button><i class="sc xi-search"><span>히히</span></i></button>
                     </li>
                 </ul><!-- .s-end -->
@@ -241,45 +246,45 @@
                     <li><a href="#">카카오채널<i class="de_icon xi-kakaotalk"><span>윙</span></i></a></li>
                     <li><a href="#">1:1 채팅문의<i class="de_icon xi-message"><span>윙</span></i></a></li>
                 </ul><!-- .de-end -->
-                
+
             </nav><!-- .side-end -->
         </div><!-- .top_menu-end -->
     </header>
     <section class="main">
         <div class="sy">
             <div class="swiper-wrapper">
-            <div class="swiper-slide yo">
-                <div class="ma1">
-                    <img src="img/main1.jpg" alt="메인 이미지"/>
-                </div>
-                <h2>혁신적인 OOfoam® 기술은 일반적인 신발의 폼 소재보다</br>
-                    37% 더 많은 충격을 흡수하여 발과 관절에 가해지는 충격을 줄여줍니다.
+                <div class="swiper-slide yo">
+                    <div class="ma1">
+                        <img src="img/main1.jpg" alt="메인 이미지" />
+                    </div>
+                    <h2>혁신적인 OOfoam® 기술은 일반적인 신발의 폼 소재보다</br>
+                        37% 더 많은 충격을 흡수하여 발과 관절에 가해지는 충격을 줄여줍니다.
                     </h2>
-                <div class="ma2">
-                    <img src="img/main_txt01.png" alt="메인 텍스트"/>
+                    <div class="ma2">
+                        <img src="img/main_txt01.png" alt="메인 텍스트" />
+                    </div>
                 </div>
-            </div>
-            <div class="swiper-slide ya">
-                <div class="ma1">
-                    <a href="#"><span>버튼</span></a>
-                    <img src="img/main5.jpg" alt="메인 이미지"/>
+                <div class="swiper-slide ya">
+                    <div class="ma1">
+                        <a href="#"><span>버튼</span></a>
+                        <img src="img/main5.jpg" alt="메인 이미지" />
+                    </div>
+                    <h3>독특한 전방향 신축성을 가진 캔버스 소재로</br>
+                        만들어진 이 신발은 발 전체에 윤곽이 그려집니다.</h3>
                 </div>
-                <h3>독특한 전방향 신축성을 가진 캔버스 소재로</br>
-                    만들어진 이 신발은 발 전체에 윤곽이 그려집니다.</h3>
-            </div>
-            <div class="swiper-slide hi">
-                <div class="ma1">
-                    <img src="img/main4.png" alt="메인 이미지"/>
+                <div class="swiper-slide hi">
+                    <div class="ma1">
+                        <img src="img/main4.png" alt="메인 이미지" />
+                    </div>
+                    <h4>OOFOS는 Dana-Farber과 Jimmy Fund에서 지정한 공식 리커버리 슈즈 브랜드입니다.</br>
+                        OOFOS.com에서 제품을 구매하셨을 때, OOFOS는 유방암 치료 연구를 위해 기부하고 있습니다.</h4>
+                    <div class="ma3">
+                        <ul>
+                            <li><img src="img/main4_logo.png" alt="로고1" /></li>
+                            <li><img src="img/main4_logo2.png" alt="로고2" /></li>
+                        </ul>
+                    </div>
                 </div>
-                <h4>OOFOS는 Dana-Farber과 Jimmy Fund에서 지정한 공식 리커버리 슈즈 브랜드입니다.</br>
-                    OOFOS.com에서 제품을 구매하셨을 때, OOFOS는 유방암 치료 연구를 위해 기부하고 있습니다.</h4>
-                <div class="ma3">
-                    <ul>  
-                        <li><img src="img/main4_logo.png" alt="로고1"/></li>
-                        <li><img src="img/main4_logo2.png" alt="로고2"/></li>
-                    </ul>
-                </div>
-            </div>
             </div><!-- swiper end -->
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
@@ -291,56 +296,64 @@
             <div class="swiper-wrapper min">
                 <div class="swiper-slide">
                     <img src="img/cont01_1-1.jpg" alt="상품1" />
-                    <div class="item"><!-- item 1 -->
+                    <div class="item">
+                        <!-- item 1 -->
                         <p>OOAHH BLACK</p>
                         <strong>62,000 원</strong>
                     </div><!-- item end 1 -->
                 </div>
                 <div class="swiper-slide">
                     <img src="img/cont01_1-2.jpg" alt="상품2" />
-                    <div class="item"><!-- item 1 -->
+                    <div class="item">
+                        <!-- item 1 -->
                         <p>5082 OOMG EEZEE GRAY/WHITE (M)</p>
                         <strong>169,000 원</strong>
                     </div><!-- item end 1 -->
                 </div>
                 <div class="swiper-slide">
                     <img src="img/cont01_1-3.jpg" alt="상품3" />
-                    <div class="item"><!-- item 1 -->
+                    <div class="item">
+                        <!-- item 1 -->
                         <p>5072 OOMG EEZEE CHEETAH</p>
                         <strong>169,000 원</strong>
                     </div><!-- item end 1 -->
                 </div>
                 <div class="swiper-slide">
                     <img src="img/cont01_1-4.jpg" alt="상품4" />
-                    <div class="item"><!-- item 1 -->
+                    <div class="item">
+                        <!-- item 1 -->
                         <p>OOAHH BLACK</p>
                         <strong>69,000 원</strong>
                     </div><!-- item end 1 -->
                 </div>
                 <div class="swiper-slide">
                     <img src="img/cont01_1-5.jpg" alt="상품5" />
-                    <div class="item"><!-- item 1 -->
+                    <div class="item">
+                        <!-- item 1 -->
                         <p>6070 OOMG BOOTIE</p>
                         <strong>219,000 원</strong>
                     </div><!-- item end 1 -->
                 </div>
                 <div class="swiper-slide">
                     <img src="img/cont01_1-6.jpg" alt="상품6" />
-                    <div class="item"><!-- item 1 -->
+                    <div class="item">
+                        <!-- item 1 -->
                         <p>OORIGLNAL BLACK</p>
                         <strong>62,000 원</strong>
                     </div><!-- item end 1 -->
                 </div>
                 <div class="swiper-slide">
                     <img src="img/cont01_1-7.jpg" alt="상품7" />
-                    <div class="item"><!-- item 1 -->
+                    <div class="item">
+                        <!-- item 1 -->
                         <p>OOLALA BLUE</p>
                         <strong>89,000 원</strong>
                     </div><!-- item end 1 -->
                 </div>
                 <div class="swiper-slide">
                     <img src="img/cont01_1-8.jpg" alt="상품8" />
-                    <div class="item"><!-- item 1 -->
+                    <div class="item">
+                        <!-- item 1 -->
                         <p>5070 OOMG BLACK/WHITE</p>
                         <strong>169,000 원</strong>
                     </div><!-- item end 1 -->
@@ -353,7 +366,9 @@
                 </a>
             </div>
         </div>
-        <div class="sd"><p>Slide</p></div>
+        <div class="sd">
+            <p>Slide</p>
+        </div>
         <div #swiperRef="" class="swiper-container min2">
             <div class="swiper-wrapper min">
                 <div class="swiper-slide">
@@ -388,7 +403,9 @@
                 </a>
             </div>
         </div>
-        <div class="sc"><p>Slide</p></div>
+        <div class="sc">
+            <p>Slide</p>
+        </div>
 
     </section>
     <section class="cont02">
@@ -506,4 +523,5 @@
         </div>
     </footer>
 </body>
+
 </html>
